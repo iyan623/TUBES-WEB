@@ -1,0 +1,228 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3E5879;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #D8C4B6;
+}
+
+/* Hero Section dengan Gambar Latar */
+.hero {
+    height: 100vh;
+    background: url('Gambar/latar saja.jpg') no-repeat center center/cover, linear-gradient(to bottom, #3E5879, #557a95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hero Content Animasi */
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+    animation: waveMove 6s ease-in-out infinite;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #D8C4B6;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    animation: bounceIn 1.5s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3E5879; /* Tombol dengan warna yang diminta */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #557a95; /* Warna aktif saat hover */
+    transform: translateY(-3px);
+}
+
+/* Tentang Kami */
+.about {
+    background-color: #f8f8f8;
+    padding: 100px 20px;
+    text-align: center;
+    color: #3E5879;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #D8C4B6; /* Warna header yang diminta */
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-out 0.5s;
+}
+
+/* Produk Unggulan Section */
+.menu-section {
+    background-color: #f9f9f9; /* Warna latar lembut */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 2.5rem;
+    color: #3E5879;
+    margin-bottom: 30px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout grid responsif */
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px; /* Menyesuaikan tinggi gambar */
+    object-fit: cover;
+    border-bottom: 3px solid #D8C4B6; /* Memberikan garis di bawah gambar */
+}
+
+.menu-item-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-item h4 {
+    font-size: 1.5rem;
+    color: #3E5879;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #5A6A8C;
+    line-height: 1.6;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #D8C4B6;
+    margin-top: 15px;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tombol Pesan Sekarang */
+.menu-item .order-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3E5879;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item .order-button:hover {
+    background-color: #557a95;
+    transform: translateY(-3px);
+}
+
+/* Responsif untuk Perangkat Lebih Kecil */
+@media (max-width: 768px) {
+    .menu-item img {
+        height: 140px; /* Ukuran lebih kecil untuk layar kecil */
+    }
+
+    .menu-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+
+    .menu-item .price {
+        font-size: 1rem;
+    }
+}
+

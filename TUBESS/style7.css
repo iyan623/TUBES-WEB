@@ -1,0 +1,95 @@
+/* Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Judul dan Tombol */
+  h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  button {
+    background-color: #557a95;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Tabel */
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  table:hover {
+    transform: translateY(-3px);
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #557a95;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #d4e7ed;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Formulir */
+  form {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  form:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Bagian Responsif */
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+    }
+  
+    form {
+      width: 90%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  

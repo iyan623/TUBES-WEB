@@ -1,0 +1,183 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #3E5879, #557a95);
+    animation: bg-wave 8s ease-in-out infinite;
+    padding: 20px;
+}
+
+/* Animasi Latar Belakang */
+@keyframes bg-wave {
+    0% {
+        background: linear-gradient(to bottom right, #3E5879, #557a95);
+    }
+    50% {
+        background: linear-gradient(to bottom right, #557a95, #3E5879);
+    }
+    100% {
+        background: linear-gradient(to bottom right, #3E5879, #557a95);
+    }
+}
+
+/* Container */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: form-bounce 1s ease-out;
+}
+
+/* Animasi Lucu untuk Formulir */
+@keyframes form-bounce {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #F72C5B;
+    margin-bottom: 20px;
+}
+
+/* Labels and Inputs */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #557a95;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #F72C5B;
+    outline: none;
+    box-shadow: 0 0 5px rgba(245, 44, 91, 0.5);
+}
+
+/* Checkbox Styling */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Button Styling with Animasi Lucu */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #F72C5B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: button-pop 0.5s ease-in-out infinite;
+}
+
+@keyframes button-pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:hover {
+    background-color: #557a95;
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Link Styling */
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #F72C5B;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid #F72C5B;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #557a95;
+    border-color: #557a95;
+}
+
+/* Error Message */
+p {
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .register-link {
+        font-size: 12px;
+    }
+}

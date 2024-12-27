@@ -1,0 +1,60 @@
+/* Umum */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+  font-size: 2.5em;
+}
+
+/* Tabel Styling */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efek animasi saat hover */
+table:hover {
+  transform: translateY(-3px);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Header tabel berwarna seperti admin */
+th {
+  background-color: #557a95;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hover pada setiap barisan tabel */
+tr:nth-child(even) {
+  background-color: #f1f8ff;
+}
+
+tr:hover {
+  background-color: #d1e7ff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+}

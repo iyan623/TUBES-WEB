@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #557a95, #7ba0ba);
+    animation: bg-animation 6s infinite alternate;
+    padding: 20px;
+}
+
+@keyframes bg-animation {
+    0% {
+        background: linear-gradient(to bottom right, #557a95, #3E5879);
+    }
+    100% {
+        background: linear-gradient(to bottom right, #557a95, #3E5879);
+    }
+}
+
+/* Form Styling */
+form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated Background Effect */
+form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #ffffff, transparent);
+    animation: rotate-effect 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate-effect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form Header */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Labels and Inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #B2C9AD;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, 
+input[type="email"]:focus, textarea:focus {
+    border-color: #91AC8F;
+    outline: none;
+    box-shadow: 0 0 5px rgba(145, 172, 143, 0.5);
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(145, 172, 143, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(145, 172, 143, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(145, 172, 143, 0.5);
+    }
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #96b8e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: slide-in 0.7s ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+button:hover {
+    background-color: #96b8e5;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0px);
+}
+
+/* Link Styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #F72C5B;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid #6aacd5;
+    width: fit-content;
+    margin: 10px auto;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+    color: #6aacd5;
+    border-color: #F72C5B;
+}
+
+/* Error Message */
+p {
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+}

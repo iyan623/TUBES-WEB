@@ -1,0 +1,115 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Latar Halaman */
+body {
+  background: url('Gambar/dash.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animasi FadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Judul Halaman */
+h1 {
+  font-size: 30px;
+  color: #333;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Dashboard Kontainer */
+.dashboard-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  transition: transform 0.2s ease;
+}
+
+/* Menu Admin dan User dengan jarak yang diatur */
+.admin-menu,
+.user-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px; /* Kurangi jarak antar tombol */
+  margin: 10px 0;
+}
+
+/* Gaya untuk setiap tombol dengan ukuran yang lebih ramping */
+.user-menu a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #557a95;
+  padding: 8px 15px; /* Lebih ramping */
+  border-radius: 4px; /* Perkecil border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-size: 14px; /* Lebih ramping tampilannya */
+}
+
+/* Efek hover */
+.user-menu a:hover {
+  background-color: #335d6a;
+  transform: scale(1.1);
+}
+
+/* Tombol Logout dengan ukuran konsisten */
+a.logout {
+  background-color: #e74c3c;
+  padding: 8px 15px; /* Lebih ramping */
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+a.logout:hover {
+  background-color: #c0392b;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  a {
+    font-size: 12px;
+  }
+
+  .dashboard-container {
+    width: 90%;
+  }
+}

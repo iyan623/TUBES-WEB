@@ -1,0 +1,117 @@
+/* Reset Umum untuk Halaman */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Latar Belakang Putih */
+  body {
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    color: #213555;
+    margin: 20px 0;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Animasi untuk Header */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Form Styling */
+  form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #3E5879;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Animasi Fade In untuk Form */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  form:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  /* Input Field Styling */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #3E5879;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #213555;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #213555;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background-color: #3E5879;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Link Styling */
+  a {
+    text-decoration: none;
+    color: #3E5879;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #213555;
+  }
+  
